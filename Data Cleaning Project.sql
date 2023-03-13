@@ -11,17 +11,17 @@ FROM DataCleaningProject.dbo.NashvilleHousing
 
 --Changing SaleDate to a different Format
 
---SELECT SaleDate, CONVERT(date, SaleDate)							--
---FROM DataCleaningProject.dbo.NashvilleHousing						--
-																	-- Would not Update
---UPDATE DataCleaningProject.dbo.NashvilleHousing					--
---SET SaleDate = CONVERT(date, SaleDate)							--
+--SELECT SaleDate, CONVERT(date, SaleDate)					--
+--FROM DataCleaningProject.dbo.NashvilleHousing					--
+										-- Would not Update
+--UPDATE DataCleaningProject.dbo.NashvilleHousing				--
+--SET SaleDate = CONVERT(date, SaleDate)					--
 
 ALTER TABLE DataCleaningProject.dbo.NashvilleHousing				-- Adds new column and
-ADD SalesDateConverted Date;										-- updates new new column with desired
-																	-- date format
-UPDATE DataCleaningProject.dbo.NashvilleHousing						-- 
-SET SalesDateConverted = CONVERT(date, SaleDate)					-- 
+ADD SalesDateConverted Date;							-- updates new new column with desired
+										-- date format
+UPDATE DataCleaningProject.dbo.NashvilleHousing					-- 
+SET SalesDateConverted = CONVERT(date, SaleDate)				-- 
 
 
 ------------------------------------------------------------------------------------------------------------
@@ -175,6 +175,16 @@ FROM DataCleaningProject.dbo.NashvilleHousing
 
 
 ------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 -- Deleting Unused Columns
 
